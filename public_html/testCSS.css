@@ -7,13 +7,114 @@ and open the template in the editor.
     Created on : Jan 18, 2020, 3:10:00 AM
     Author     : Owner
 */
-
+h1{
+    font-size:60px;
+    text-align:center;
+    font-family:Lucida Bright;
+    border:10px solid rgb(78, 225, 174);
+}
 body{
     background-color: rgba(235, 44, 212, 0.4);
+    background-image: url(Images/kisspng-natural-resource-nature-science-natural-5abbf50e0fdee3.749224941522267406065.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+   background-size: 40% 60%;
+   
 }
+/*<div> is only used if you want to cover specific areas with a background image*/
+/*<picture> is used to display an image depending on the device's screen size*/
 img{
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
+a.meat:link{
+    background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+        }
+        
+        a.meat:hover{
+            background-color: green;
+        }
+        a.email:link{
+            text-decoration: none;
+        }
+        a.email:hover{
+            color: red;
+            text-decoration: underline;
+        }   
+        #p1{
+            float: left;
+            width: 30px;
+            height: 30px;
+        }
+        table.table{
+            font-size: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right:auto;
+        }
+        th, td{
+            width: 75%;
+            font-size: 20px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td{
+            padding: 15px;
+               text-align: left;
+        }
+        table.table tr:nth-child(even) {
+  background-color: #eee;
+}
+table.table tr:nth-child(odd) {
+ background-color: #fff;
+}
+table.table th {
+  background-color: black;
+  color: white;
+}
+ul, ol{
+    width: 20%;
+    height: 20%;
+    font-size: 22px;
+     display: inline-block;
+/*    vertical-align: top;
+    padding-left: 0;    */
+}
+/*Put inlne-block if you want to display elements on the same line*/
+li.list{
+    list-style-type: disc; 
+}
+ul.nav {
+  list-style-type: none;
+  width: 80%;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+/*margin is for space outside the element but padding is for the space inside the element*/
+li.nav {
+  float: left;
+}
+
+li.nav a.nav {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li.nav a.nav:hover {
+  background-color: #111111;
+}
+            
 
