@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : Owner
 */
 h1{
-    font-size:60px;
+    font-size:15vw;
     text-align:center;
     font-family:Lucida Bright;
     border:10px solid rgb(78, 225, 174);
@@ -50,8 +50,8 @@ a.meat:link{
         }   
         #p1{
             float: left;
-            width: 30px;
-            height: 30px;
+            max-width: 30px;
+            max-height: 30px;
         }
         table.table{
             font-size: 20px;
@@ -60,7 +60,7 @@ a.meat:link{
             margin-right:auto;
         }
         th, td{
-            width: 75%;
+            max-width: 75%;
             font-size: 20px;
             border: 1px solid black;
             border-collapse: collapse;
