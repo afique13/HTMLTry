@@ -21,18 +21,40 @@ and open the template in the editor.
         </style>
     </head>
     <body>
-        <form target="_blank" method="post">
+        <form action="/test.html" target="_blank" method="post">
             <fieldset>
                 <legend>Personal Information</legend>
                 First name:<br>
                 <input type="text" name="firstname" ><br>
                 Last name:<br>
                 <input type="text" name="lastname"><br>
+                Password:<br>
+                <input type="password" name="pw"><br>
                 Gender: <br>
                 <input type="radio" name="gender" value="male"> Male<br>
                 <input type="radio" name="gender" value="female"> Female<br>
                 <input type="radio" name="gender" value="xtau"> Rather not say<br><br>
+                <select name="race">
+                    <option value="Malay">Malay</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="others">Others</option>
+                </select><br><br>
+                If you are unsatisfied with the information provided, click the reset button<br>
+                <input type="reset" value="I wanna redo the form"><br><br> 
                 <input type="submit" value="Submit">
+                <p>What do you think of the format of this form?</p>
+                <textarea name="comment" rows="10" cols="30">
+Write a comment
+                </textarea><br><br>
+                <input list="browsers">
+                <datalist id="browsers">
+                    <option value="Microsoft Edge">
+                    <option value="Chrome">
+                    <option value="Firefox">    
+                </datalist>
+                <br><br>
+                <button type="button" onclick="alert('You are a fucking idiot')">Click me</button>
             </fieldset>
         </form>
     </body>
