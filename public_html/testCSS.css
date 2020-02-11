@@ -8,12 +8,14 @@ and open the template in the editor.
     Author     : Owner
 */
 h1{
-    font-size:15vw;
+    font-size:10vw;
     text-align:center;
     font-family:Lucida Bright;
     border:10px solid rgb(78, 225, 174);
+    border-style: dashed;
+    border-radius: 5px;
 }
-body{
+body.generic{
     background-color: rgba(235, 44, 212, 0.4);
     background-image: url(Images/kisspng-natural-resource-nature-science-natural-5abbf50e0fdee3.749224941522267406065.png);
     background-repeat: no-repeat;
@@ -22,8 +24,12 @@ body{
    background-size: 40% 60%;
    
 }
+/*Use repeat-x if you want the image to repeat horizontally and vice versa for it to repeat vertically*/
 /*<div> is only used if you want to cover specific areas with a background image*/
 /*<picture> is used to display an image depending on the device's screen size*/
+#body1{
+      background-color: rgba(235, 44, 212, 0.4);
+}
 img{
                 display: block;
                 margin-left: auto;
@@ -122,6 +128,23 @@ li.nav a.nav:hover {
     display:block;
     margin-left:auto;
     margin-right:auto;
+}
+div.boxmodel{
+    font-size: 1.8vw;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: blueviolet solid 5px;
+    max-width: 500px;
+    max-height: 700px;
+    outline: crimson solid 3px;
+}
+img.bttf{
+    max-width: 750px;
+    max-height: 350px;
 }
             
 
