@@ -7,6 +7,8 @@ and open the template in the editor.
     Created on : Jan 18, 2020, 3:10:00 AM
     Author     : Owner
 */
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+
 h1{
     font-size:10vw;
     text-align:center;
@@ -15,6 +17,9 @@ h1{
     border-style: dashed;
     border-radius: 5px;
 }
+
+/*use vw to resixe text according to the size of the browser*/
+/*use em or percent to resize text according to the browser*/
 body.generic{
     background-color: rgba(235, 44, 212, 0.4);
     background-image: url(Images/kisspng-natural-resource-nature-science-natural-5abbf50e0fdee3.749224941522267406065.png);
@@ -30,11 +35,14 @@ body.generic{
 #body1{
       background-color: rgba(235, 44, 212, 0.4);
 }
-img{
+img.center{
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
+
+/*Set margins to auto to horizontally center element*/            
+            
 a.meat:link{
     background-color: #f44336;
   color: white;
@@ -85,6 +93,11 @@ table.table th {
   background-color: black;
   color: white;
 }
+
+tr:hover .table {
+    background-color: aqua;
+}
+
 ul, ol{
     width: 20%;
     height: 20%;
@@ -139,12 +152,45 @@ div.boxmodel{
     margin-bottom: 50px;
     border: blueviolet solid 5px;
     max-width: 500px;
-    max-height: 700px;
+    max-height: 730px;
     outline: crimson solid 3px;
 }
 img.bttf{
+    margin-left: 78px;
     max-width: 750px;
     max-height: 350px;
+    display: block;
+}
+
+div.fixedelem{
+    border: 2px solid green;
+    background-color: greenyellow;
+    color: black;
+    width: 120px;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}
+/*absolute positioned divs will be placed within the nearest ancestor div*/
+/*For absolute position, give z-stack property a negative or positive value to determine if the element will be in front or behind the ancestor element*/
+/*For position, always remember to specify the top, bottom, right or left*/
+div.stickyelem{
+    border: 2px solid green;
+    background-color: greenyellow;
+    color: black;
+    width: 300px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+img.haram{
+    float:right;
+    max-width: 100px;
+    max-height: 100px;
 }
             
 
