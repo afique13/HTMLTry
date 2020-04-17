@@ -141,6 +141,7 @@ li.nav a.nav:hover {
     display:block;
     margin-left:auto;
     margin-right:auto;
+    margin-bottom:50px;
 }
 div.boxmodel{
     font-size: 1.8vw;
@@ -192,5 +193,78 @@ img.haram{
     max-width: 100px;
     max-height: 100px;
 }
-            
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*clearfix class is to save some space for the bottom of the <div>*/
+div.box{
+    width: 33.33%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    padding: 40px;
+}
+
+div.align {
+    box-sizing:border-box;
+    max-width:57.3%;
+    display:flex;
+/*    margin-left:10px;*/
+    margin-bottom:30px;
+    border: solid 4px chartreuse;
+    overflow:auto;
+    transform: translate(31%,0);
+    /*transform can also be used to align an element without needing to connfigure the size*/
+}
+img.imgalign{
+    float:left;
+    max-width:200px;
+    max-height:200px;
+}
+p.p_align{
+    transform: translate(0%,0);
+    display:inline-block;
+}
+p.display{
+    display: none;
+    background-color: darkmagenta;
+    padding: 25px;
+}
+div.display:hover p {
+    oveflow:auto;
+    width: 70%;
+    display: block;
+}
+/*Use p:first-child to customize the first <p> element*/
+/*Use pseudo elements to customize elements on the page*/
+q:lang(no){
+    quotes: "~" "!!";
+}       
+
+ul.navbar{
+    list-style-type:none;
+    background-color: #bbb;
+    margin:0;
+    padding:0;
+    positon:fixed;
+    max-height: 30%;
+    max-width: 20%;
+    overflow:hidden;
+}
+li.navbar a{
+    font-size: 16px;
+    color: #111111;
+    display: block;
+    padding: 8px 16px;
+    margin-bottom:0;
+    text-decoration: none;
+    text-align:center;
+}
+li.navbar a:hover:not(.navbar){
+    background-color: black;
+    color: red;
+}
 
