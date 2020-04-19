@@ -11,6 +11,10 @@ and open the template in the editor.
 #body1{
       background-color: rgba(235, 44, 212, 0.4);
 }
+div.section{
+    display: flex;
+}
+/*flex is used to ensure responsive equal height s among the sections*/
 h1{
     font-size:5vw;
     text-align:center;
@@ -21,15 +25,18 @@ h1{
 }
 ul.navbar{
     list-style-type:none;
-    background-color: #bbb;
+    background-color: lightgray;
     margin:0;
     padding:0;
-    height: 50%;
-    max-width: 10%;
+    display: flex;
+    max-width: 10vw;
     overflow:hidden;
+    display:inline-block;
+    float:left;
 }
+/*use em to scale font size according to different viewports(em is a multiplier based on the current font size)*/
 li.navbar a{
-    font-size: 16px;
+    font-size: 1.2em;
     color: #111111;
     display: block;
     padding: 20px 5px;
