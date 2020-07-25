@@ -263,7 +263,7 @@ li.navbar a{
     text-decoration: none;
     text-align:center;
 }
-li.navbar a:hover:not(.navbar){
+dv.bg li.navbar a:hover:not(.navbar){
     background-color: black;
     color: red;
 }

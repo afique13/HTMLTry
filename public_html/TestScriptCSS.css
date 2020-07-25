@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 23, 2020, 11:31:59 PM
+    Author     : Owner
+*/
+
+div.red{
+    background-color: grey;
+    display: inline-block;
+    max-width: 8%;
+    padding: 0.5%;
+}
+a.a-red{
+    text-decoration: none;
+    color: activeborder;
+    text-align: center;
+}
+div.red:hover{
+    background-color: red;
+}
