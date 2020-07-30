@@ -22,3 +22,6 @@ a.a-red{
 div.red:hover{
     background-color: red;
 }
+ul.seven{
+    list-style-type: square;
+}
