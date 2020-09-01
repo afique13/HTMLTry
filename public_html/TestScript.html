@@ -14,7 +14,15 @@ and open the template in the editor.
     </head>
     <body>
         <h1 id="demo"></h1>
-        <button type="button" onclick="myFunction()" style="margin:10px 0px 10px;">Press here!</button><br><br>
+        <h2></h2>
+        <div class="btn-group">
+            <button type="button" onclick="myFunction()" >Header 1</button>
+            <button type="button" id="counter-button">Header 2</button>
+            <button type="button" data-color="red" class="color-button">Red</button>
+            <button type="button" data-color="blue" class="color-button">Blue</button>
+            <button type="button" data-color="green" class="color-button">Green</button>
+            <br><br><br>
+        </div>
         <div onclick="window.print()" class="red"><a href='' class='a-red'>Print this page</a></div>
         <p id='var'></p>
         <h2 style='color: darkslategray;font-family:Lucida Bright;'>Maths with JavaScript</h2>
@@ -23,6 +31,7 @@ and open the template in the editor.
         <p id='function-example' ></p>
         <button type='button' onclick='displayAnswer()' style='margin: 2px 0 10px;'>Press here!</button>
         <p id='name'></p>
+        
         <div id='list'></div>
         
         <script>

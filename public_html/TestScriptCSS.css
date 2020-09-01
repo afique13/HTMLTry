@@ -25,3 +25,18 @@ div.red:hover{
 ul.seven{
     list-style-type: square;
 }
+.btn-group button{
+    display: flex;
+    background-color: #4CAF50;
+  border: 1px solid green; 
+  color: white; 
+  padding: 0.6vw 1.25vw; 
+  cursor: pointer; 
+  float: left; 
+}
+.btn-group:after {
+    /* Clear floats for the subsequent element*/
+  content: "";
+  clear: both;
+  display: table;
+}
