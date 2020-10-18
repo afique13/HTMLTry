@@ -15,14 +15,30 @@ and open the template in the editor.
     <body>
         <h1 id="demo"></h1>
         <h2></h2>
+        <h2 id="text1" style="display:none;" >Hello!</h2>
         <div class="btn-group">
             <button type="button" onclick="myFunction()" >Header 1</button>
             <button type="button" id="counter-button">Header 2</button>
             <button type="button" data-color="red" class="color-button">Red</button>
             <button type="button" data-color="blue" class="color-button">Blue</button>
             <button type="button" data-color="green" class="color-button">Green</button>
+            <button type="button" data-text="text1" class="text1-button" >Show Text</button>
             <br><br><br>
         </div>
+        
+        <div class="parent">
+            Post #1
+            <button type="button" class="child-button" style="float:right;font-size: 14px;">Hide</button>
+        </div>
+        <div class="parent">
+            Post #2
+            <button type="button" class="child-button" style="float:right;font-size: 14px;">Hide</button>
+        </div>
+        <div class="parent">
+            Post #3
+            <button type="button" class="child-button" style="float:right;font-size: 14px;">Hide</button>
+        </div>
+        
         <div onclick="window.print()" class="red"><a href='' class='a-red'>Print this page</a></div>
         <p id='var'></p>
         <h2 style='color: darkslategray;font-family:Lucida Bright;'>Maths with JavaScript</h2>

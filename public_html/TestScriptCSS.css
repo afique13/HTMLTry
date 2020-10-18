@@ -40,3 +40,65 @@ ul.seven{
   clear: both;
   display: table;
 }
+
+@keyframes move{
+    0% {
+        left: 0%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes hide {
+    0% {
+       opacity: 1; 
+       height: 100%;
+       line-height: 100%;
+       padding: 20px;
+       margin-bottom: 10px;
+       margin-top: 10px;
+    }
+    
+    75%{
+        opacity: 0;
+        height: 100%;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    100%{
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+}
+
+#demo{
+    position: relative;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-delay: 3s;
+}
+
+div.parent{
+    background-color: #4CAF50;
+    padding: 2vw 1.25vw;
+    margin: 2vw;
+    font-size: 18px;
+    animation-name: hide;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+

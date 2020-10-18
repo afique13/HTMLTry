@@ -52,8 +52,36 @@ function counter(){
 document.addEventListener('DOMContentLoaded', function(){
    document.getElementById('counter-button').onclick = counter; 
 //   
-//   setInterval(counter,1000);
+//   setInterval(counter,1000); // 1000 milliseconds
 });
+
+document,addEventListener('click', function(event){
+    const element = event.target;
+    if(element.className === 'child-button'){
+        element.parentElement.style.animationPlayState = 'running';
+        element.parentElement.addEventListener('animationend', function(){
+           element.parentElement.remove(); 
+        });
+    }
+});
+
+function showPage(text){
+    document.querySelector('#'+text).style.display = 'block';
+}
+
+history.replaceState({textID: 'text1'},'','./');
+
+//Press back button to return to previous state 
+//Still needs work since function only works when you press the "Show Text" twice
+window.onpopstate = function(event){
+    console.log(event);
+    hidePage(event.state.textID);
+};
+
+function hidePage(text){
+    if(text!==null)
+        document.querySelector('#'+text).style.display = 'none';
+}
 
 document.addEventListener('DOMContentLoaded', function(){
     
@@ -62,6 +90,12 @@ document.addEventListener('DOMContentLoaded', function(){
        document.querySelector('h1').style.color = button.dataset.color;
         };
    });
+   
+   document.querySelector('.text1-button').onclick = function(){
+       const textID = this.dataset.text;
+       history.pushState({textID: textID},"",'HideText');
+       showPage(this.dataset.text);
+   };
    
 });
 
