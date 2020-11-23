@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 19, 2020, 4:24:23 PM
+    Author     : Owner
+*/
+
+body{
+    background-color: azure;
+}
+button.more-button{
+   background-color:black;
+   border:none;
+}
+div.navbar{
+    margin:0;
+    padding:0;
+    background-color:black;
+    position: -webkit-sticky;
+}
+ul.navbar a.a-nav{
+    color: activeborder;
+}
+ul.navbar li{
+    display:inline-block;
+    padding:1px 12px;
+}
+ul.navbar a.a-nav:hover{
+    text-decoration:none;
+    color: red;
+}
+.bg{
+    background-image: url(https://wallpapermemory.com/uploads/334/game-of-thrones-wallpaper-hd-1920x1080-383419.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    position: relative;
+    display:inline-block;
+    text-align: center;
+}
+div.synopsis{
+    text-align: center;
+    padding: 15px 30px;
+}
+.card-img-top{
+    min-height: 17vw;
+}
+.flex-column{
+    background-color: black;
+    color: activeborder;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 100px;
+    max-width: 40vw;
+}
+.flex-column li{
+    padding: 12px;
+    border: 1px solid activeborder;
+}
+.flex-column li:hover{
+    color: red;
+}
+.sign-up:hover{
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+.row{
+    margin-top: 30px;
+    padding: 20px;
+}
