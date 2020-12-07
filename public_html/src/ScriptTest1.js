@@ -109,8 +109,8 @@ var person = {
   },
 };
 
-let phones; let
-  html_text;
+let phones;
+let html_text;
 phones = ['iPhone', 'Huawei', 'Samsung', 'OnePlus'];
 text = "<ul class='seven'>";
 phones.forEach(listFunction);

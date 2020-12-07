@@ -4,6 +4,10 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
       },
-      "eslint.validate": ["javascript"]
+    "eslint.validate": [
+        "javascript"
+    ],
+    "eslint.format.enable": false,
+    "eslint.enable": true
     
 }
