@@ -11,7 +11,7 @@ window.onload = function () {
   document.getElementById('var').innerHTML = `The answer for x + y = ${z}`;
   document.getElementById('name').innerHTML = `${person.fullName()}'s ID number is ${person.id}`;
   document.getElementById('list').innerHTML = text;
-  document.querySelector('h2').innerHTML = localStorage.getItem('count');
+  document.querySelector('#count-num').innerHTML = localStorage.getItem('count');
 };
 
 function myFunction() {
@@ -33,6 +33,8 @@ function displayAnswer() {
 
 const count = 0;
 
+// If localStorage is null, then set count = 0
+
 if (!localStorage.getItem('count')) {
   localStorage.setItem('count', 0);
 }
@@ -44,8 +46,13 @@ function counter() {
   localStorage.setItem('count', count);
 }
 
+function reactCounter() {
+  const obj = new Count();
+  obj.count();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('counter-button').onclick = counter;
+  document.getElementById('counter-button').onclick = reactCounter;
   //
   //   setInterval(counter,1000); // 1000 milliseconds
 

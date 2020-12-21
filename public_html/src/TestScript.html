@@ -5,70 +5,127 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>JavaScript Test</title>
-        <link rel="stylesheet" type="text/css" href="TestScriptCSS.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-        <script src="ScriptTest1.js"></script>
-    </head>
-    <body>
-        <h1 id="demo"></h1>
-        <div id="app" style="font-size: 18px;"></div>
-        <h2 id="count-num"></h2>
-        <h2 id="text1" style="display:none;" >Hello!</h2>
-        <div class="btn-group">
-            <button type="button" onclick="myFunction()" >Header 1</button>
-            <button type="button" id="counter-button">Header 2</button>
-            <button type="button" data-color="red" class="color-button">Red</button>
-            <button type="button" data-color="blue" class="color-button">Blue</button>
-            <button type="button" data-color="green" class="color-button">Green</button>
-            <button type="button" data-text="text1" class="text1-button" >Show Text</button>
-            <br><br><br>
-        </div>
-        
-        <div class="parent">
-            Post #1
-            <button type="button" class="child-button" style="float:right;font-size: 14px;">Hide</button>
-        </div>
-        <div class="parent">
-            Post #2
-            <button type="button" class="child-button" style="float:right;font-size: 14px;">Hide</button>
-        </div>
-        <div class="parent">
-            Post #3
-            <button type="button" class="child-button" style="float:right;font-size: 14px;">Hide</button>
-        </div>
-        
-        <div onclick="window.print()" class="red"><a href='' class='a-red'>Print this page</a></div>
-        <p id='var'></p>
-        <h2 style='color: darkslategray;font-family:Lucida Bright;'>Maths with JavaScript</h2>
-        <p>Take two parameters: <br>x=3<br>y=5</p>
-        <p>Press the button below to see the answer for the multiplication of both variables</p>
-        <p id='function-example' ></p>
-        <button type='button' onclick='displayAnswer()' style='margin: 2px 0 10px;'>Press here!</button>
-        <p id='name'></p>
-        
-        <div id='list'></div>
+  <head>
+    <title>JavaScript Test</title>
+    <link rel="stylesheet" type="text/css" href="TestScriptCSS.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="ScriptTest1.js"></script>
+  </head>
+  <body>
+    <h1 id="demo"></h1>
+    <div id="app" style="font-size: 18px"></div>
+    <h2 id="react-count"></h2>
+    <h2 id="text1" style="display: none">Hello!</h2>
 
-        <script type="text/babel">
-            
-            class App extends React.Component{
-              render(){  
-                  return(
-                        <div>
-                            First React!
-                        </div>
-                    );
-              }
-            };
-            
-            ReactDOM.render(<App />, document.querySelector('#app'));
-            
-        </script>
+    <div class="btn-group">
+      <button type="button" onclick="myFunction()">Header 1</button>
+      <button type="button" id="counter-button">Header 2</button>
+      <button type="button" data-color="red" class="color-button">Red</button>
+      <button type="button" data-color="blue" class="color-button">Blue</button>
+      <button type="button" data-color="green" class="color-button">
+        Green
+      </button>
+      <button type="button" data-text="text1" class="text1-button">
+        Show Text
+      </button>
+      <br /><br /><br />
+    </div>
 
-    </body>
+    <div class="parent">
+      Post #1
+      <button
+        type="button"
+        class="child-button"
+        style="float: right; font-size: 14px"
+      >
+        Hide
+      </button>
+    </div>
+    <div class="parent">
+      Post #2
+      <button
+        type="button"
+        class="child-button"
+        style="float: right; font-size: 14px"
+      >
+        Hide
+      </button>
+    </div>
+    <div class="parent">
+      Post #3
+      <button
+        type="button"
+        class="child-button"
+        style="float: right; font-size: 14px"
+      >
+        Hide
+      </button>
+    </div>
+
+    <div onclick="window.print()" class="red">
+      <a href="" class="a-red">Print this page</a>
+    </div>
+    <p id="var"></p>
+    <h2 style="color: darkslategray; font-family: Lucida Bright">
+      Maths with JavaScript
+    </h2>
+    <p>Take two parameters: <br />x=3<br />y=5</p>
+    <p>
+      Press the button below to see the answer for the multiplication of both
+      variables
+    </p>
+    <p id="function-example"></p>
+    <button type="button" onclick="displayAnswer()" style="margin: 2px 0 10px">
+      Press here!
+    </button>
+    <p id="name"></p>
+
+    <div id="list"></div>
+
+    <script type="text/babel">
+      class TripleHello extends React.Component {
+        render() {
+          return <h2>Hello, {this.props.name}!</h2>;
+        }
+      }
+
+      class App extends React.Component {
+        render() {
+          return (
+            <div>
+              <TripleHello name="Harry" />
+              <TripleHello name="Ron" />
+              <TripleHello name="Hermione" />
+            </div>
+          );
+        }
+      }
+
+      class Count extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            count: 10,
+          };
+        }
+
+        render() {
+          return <h2>{this.state.count}</h2>;
+        }
+      }
+
+      ReactDOM.render(<Count />, document.querySelector("#react-count"));
+      ReactDOM.render(<App />, document.querySelector("#app"));
+    </script>
+  </body>
 </html>
