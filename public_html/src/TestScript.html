@@ -19,7 +19,7 @@ and open the template in the editor.
       crossorigin
     ></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="ScriptTest1.js"></script>
+    <script type="module" src="ScriptTest1.js"></script>
   </head>
   <body>
     <h1 id="demo"></h1>
@@ -111,20 +111,22 @@ and open the template in the editor.
         }
       }
 
-      class Count extends React.Component {
+      /*class Count extends React.Component {
         constructor(props) {
           super(props);
           this.state = {
-            count: 10,
+            count: 1,
           };
         }
 
         render() {
+          counter(this.state.count);
           return <h2>{this.state.count}</h2>;
         }
+
       }
 
-      ReactDOM.render(<Count />, document.querySelector("#react-count"));
+      ReactDOM.render(<Count />, document.querySelector("#react-count"));*/
       ReactDOM.render(<App />, document.querySelector("#app"));
     </script>
   </body>

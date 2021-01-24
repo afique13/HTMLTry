@@ -11,7 +11,7 @@ window.onload = function () {
   document.getElementById('var').innerHTML = `The answer for x + y = ${z}`;
   document.getElementById('name').innerHTML = `${person.fullName()}'s ID number is ${person.id}`;
   document.getElementById('list').innerHTML = text;
-  document.querySelector('#count-num').innerHTML = localStorage.getItem('count');
+  document.querySelector('#react-count').innerHTML = localStorage.getItem('count');
 };
 
 function myFunction() {
@@ -31,7 +31,7 @@ function displayAnswer() {
   document.getElementById('function-example').innerHTML = `The answer is ${ans}`;
 }
 
-const count = 0;
+let count = 0;
 
 // If localStorage is null, then set count = 0
 
@@ -39,20 +39,15 @@ if (!localStorage.getItem('count')) {
   localStorage.setItem('count', 0);
 }
 
-function counter() {
-  let count = localStorage.getItem('count');
+export default function counter(n) {
+  if (localStorage.getItem('count') != null) { count = localStorage.getItem('count'); } else { count = n; }
   count++;
-  document.querySelector('#count-num').innerHTML = count;
+  document.querySelector('#react-count').innerHTML = count;
   localStorage.setItem('count', count);
 }
 
-function reactCounter() {
-  const obj = new Count();
-  obj.count();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('counter-button').onclick = reactCounter;
+  document.getElementById('counter-button').onclick = counter;
   //
   //   setInterval(counter,1000); // 1000 milliseconds
 
@@ -117,7 +112,7 @@ var person = {
 };
 
 let phones;
-let html_text;
+let text;
 phones = ['iPhone', 'Huawei', 'Samsung', 'OnePlus'];
 text = "<ul class='seven'>";
 phones.forEach(listFunction);

@@ -1,5 +1,10 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = counter;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,7 +17,7 @@ window.onload = function () {
   document.getElementById('var').innerHTML = "The answer for x + y = ".concat(z);
   document.getElementById('name').innerHTML = "".concat(person.fullName(), "'s ID number is ").concat(person.id);
   document.getElementById('list').innerHTML = text;
-  document.querySelector('#count-num').innerHTML = localStorage.getItem('count');
+  document.querySelector('#react-count').innerHTML = localStorage.getItem('count');
 };
 
 function myFunction() {
@@ -42,20 +47,20 @@ if (!localStorage.getItem('count')) {
   localStorage.setItem('count', 0);
 }
 
-function counter() {
-  var count = localStorage.getItem('count');
+function counter(n) {
+  if (localStorage.getItem('count') != null) {
+    count = localStorage.getItem('count');
+  } else {
+    count = n;
+  }
+
   count++;
-  document.querySelector('#count-num').innerHTML = count;
+  document.querySelector('#react-count').innerHTML = count;
   localStorage.setItem('count', count);
 }
 
-function reactCounter() {
-  var obj = new Count();
-  obj.count();
-}
-
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('counter-button').onclick = reactCounter; //
+  document.getElementById('counter-button').onclick = counter; //
   //   setInterval(counter,1000); // 1000 milliseconds
 
   document.querySelectorAll('.color-button').forEach(function (button) {
@@ -117,7 +122,7 @@ var person = {
   }
 };
 var phones;
-var html_text;
+var text;
 phones = ['iPhone', 'Huawei', 'Samsung', 'OnePlus'];
 text = "<ul class='seven'>";
 phones.forEach(listFunction);
