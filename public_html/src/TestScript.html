@@ -92,6 +92,8 @@ and open the template in the editor.
 
     <div id="list"></div>
 
+    <div id="react-math"></div>
+
     <script type="text/babel">
       class TripleHello extends React.Component {
         render() {
@@ -111,22 +113,70 @@ and open the template in the editor.
         }
       }
 
-      /*class Count extends React.Component {
+      class Math extends React.Component {
         constructor(props) {
           super(props);
           this.state = {
-            count: 1,
+            num1: 3,
+            num2: 4,
+            response: "",
+            score: 0,
           };
         }
 
         render() {
-          counter(this.state.count);
-          return <h2>{this.state.count}</h2>;
+          const styling = {
+            paddingTop: "10px",
+            paddingBottom: "10px",
+          };
+          return (
+            <div>
+              <div style={styling}>
+                {this.state.num1} + {this.state.num2}
+              </div>
+              <input
+                onKeyPress={this.inputKeyPress}
+                onChange={this.updateResponse}
+                value={this.state.response}
+              />
+              <div style={styling}>Score: {this.state.score}</div>
+            </div>
+          );
         }
 
+        inputKeyPress = (event) => {
+          if (event.key === "Enter") {
+            const answer = parseInt(this.state.response);
+            if (answer === this.state.num1 + this.state.num2) {
+              this.setState((state) => ({
+                score: state.score + 1,
+                //Math functions cant work on Chrome for some reason
+                //num1: Math.ceil(Math.random() * 10),
+                //num2: Math.ceil(Math.random() * 10),
+                num1: 3,
+                num2: 5,
+                response: "",
+              }));
+            } else {
+              this.setState((state) => ({
+                score: state.score - 1,
+                response: "",
+              }));
+            }
+          }
+        };
+
+        //Update response after inputting a value
+        //Cannot use this.state.response because response value has not been changed yet
+        //event.target.value is the inputted value by the user
+        updateResponse = (event) => {
+          this.setState({
+            response: event.target.value,
+          });
+        };
       }
 
-      ReactDOM.render(<Count />, document.querySelector("#react-count"));*/
+      ReactDOM.render(<Math />, document.querySelector("#react-math"));
       ReactDOM.render(<App />, document.querySelector("#app"));
     </script>
   </body>
